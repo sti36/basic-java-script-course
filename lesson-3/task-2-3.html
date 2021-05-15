@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var goods = [
+            {
+                title: "Товар №1",
+                price: 100,
+                count: 4
+            },
+            {
+                title: "Товар №2",
+                price: 200,
+                count: 5
+            },
+            {
+                title: "Товар №3",
+                price: 300,
+                count: 7
+            }
+        ];
+
+        function countBasketPrice(mas) {
+            var sum = 0;
+            for (var item of mas) {
+                sum += item.price * item.count;
+            }
+            return sum;
+        }
+        console.log(countBasketPrice(goods));
+    </script>
+</body>
+
+</html>
