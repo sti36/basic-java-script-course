@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function discharge(num) {
+            this.hundred = 0;
+            this.ten = 0;
+            this.one = 0;
+            if (num >= 0 && num < 1000) {
+                this.hundred = parseInt(num / 100);
+                num %= 100;
+                this.ten = parseInt(num / 10);
+                num %= 10;
+                this.one = num;
+            } else {
+                console.log("Number[" + num + "] the error must be between 0 and 999");
+            }
+        }
+
+        var a = new discharge(254);
+        console.log(a);
+
+        a = new discharge(-1);
+        console.log(a);
+
+        a = new discharge(999);
+        console.log(a);
+
+        a = new discharge(1000);
+        console.log(a);
+
+        a = new discharge(768);
+        console.log(a);
+
+        a = new discharge(1);
+        console.log(a);
+
+        a = new discharge(0);
+        console.log(a);
+    </script>
+</body>
+
+</html>
